@@ -9,6 +9,39 @@
   <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" shadow></a-plane>
   <a-sky color="#ECECEC"></a-sky>
 
-  <a-entity gltf-model="#balloon"></a-entity>
+  <a-entity id="player" position="0 2 0" rotation="0 0 0">
+    <a-entity id="mainCamera" camera look-controls mouse-cursor wasd-controls>
+      <!-- Hub Menu UI -->
+      <a-entity id="menuBar" headband="side:bottom;away:1;sections:4" material="shader: flat; color: purple;">
+        <!-- headband="side:bottom;away:1;sections:4" -->
+        <a-entity class="hb" material="shader: flat; color: red" position="0 0 0.01" geometry="primitive: plane; height:0.1; width:0.1;">
+            <a-animation attribute="scale" ease="ease-out" dur="500" begin="mouseenter" to="1.2 1.2 1"></a-animation>
+            <a-animation attribute="scale" ease="ease-out" dur="500" begin="mouseup" to="1.2 1.2 1"></a-animation>
+            <a-animation attribute="scale" ease="ease-in" dur="500" begin="mouseleave" to="1 1 1"></a-animation>
+            <a-animation attribute="scale" ease="ease-in" dur="500" begin="mousedown" to="1 1 1"></a-animation>
+        </a-entity>
+        <a-entity class="hb" material="shader: flat; color:blue" position="0 0 0.01" geometry="primitive: plane; height:0.1; width:0.1">
+          <a-animation attribute="scale" ease="ease-out" dur="500" begin="mouseenter" to="0.72 0.24 1"></a-animation>
+          <a-animation attribute="scale" ease="ease-out" dur="500" begin="mouseup" to="0.72 0.24 1"></a-animation>
+          <a-animation attribute="scale" ease="ease-in" dur="500" begin="mouseleave" to="0.6 0.2 1"></a-animation>
+          <a-animation attribute="scale" ease="ease-in" dur="500" begin="mousedown" to="0.6 0.2 1"></a-animation>
+        </a-entity>
+        <a-entity class="hb" material="shader: flat; color: green" position="0 0 0.01" geometry="primitive: plane; height:0.1; width:0.1">
+          <a-animation attribute="scale" ease="ease-out" dur="500" begin="mouseenter" to="1.2 1.2 1"></a-animation>
+          <a-animation attribute="scale" ease="ease-out" dur="500" begin="mouseup" to="1.2 1.2 1"></a-animation>
+          <a-animation attribute="scale" ease="ease-in" dur="500" begin="mouseleave" to="1 1 1"></a-animation>
+          <a-animation attribute="scale" ease="ease-in" dur="500" begin="mousedown" to="1 1 1"></a-animation>
+        </a-entity>
+        <a-entity class="hb" material="shader: flat; color: yellow" position="0 0 0.01" geometry="primitive: plane; height:0.1; width:0.1">
+          <a-animation attribute="scale" ease="ease-out" dur="500" begin="mouseenter" to="2.4 2.4 1"></a-animation>
+          <a-animation attribute="scale" ease="ease-out" dur="500" begin="mouseup" to="2.4 2.4 1"></a-animation>
+          <a-animation attribute="scale" ease="ease-in" dur="500" begin="mouseleave" to="2 2 1"></a-animation>
+          <a-animation attribute="scale" ease="ease-in" dur="500" begin="mousedown" to="2 2 1"></a-animation>
+        </a-entity>
+      </a-entity>
+    </a-entity>
+  </a-entity>
+
+  <!-- <a-entity gltf-model="#balloon"></a-entity> -->
 </a-scene>
 
